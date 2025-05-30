@@ -4,6 +4,7 @@ description: 'A custom Olivero subtheme.'
 package: Custom
 core_version_requirement: ^11
 base theme: olivero
+version: 1.0
 
 libraries:
   - webrin/global-styling
@@ -22,5 +23,3 @@ regions:
   content_below: Content Below
   footer_top: Footer Top
   footer_bottom: Footer Bottom
-
-version: 1.0
