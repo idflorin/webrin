@@ -1,0 +1,9 @@
+{
+  "name": "idflorin/webrin",
+  "description": "A custom Olivero subtheme.",
+  "type": "drupal-custom-theme",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": "^8.2 || ^8.3 || ^8.4"
+  }
+}
