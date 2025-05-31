@@ -1,1 +1,19 @@
 /* Custom Webrin styles */
+
+
+.node--view-mode-full .field--tags {
+    margin-block-start: var(--sp1);
+    margin-block-end: var(--sp1);
+}
+.comments__title {
+    font-size: var(--sp2);
+}
+@media (min-width: 62.5rem) {
+    .node__content {
+        padding-block-end: var(--sp2);
+    }
+    .teaser__content {
+        gap: var(--sp1);
+    }
+}
+
