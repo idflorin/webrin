@@ -1,4 +1,9 @@
 /* Custom Webrin styles */
+.region--sidebar {
+  position: sticky;
+  top: 2rem; /* Adjust to avoid overlapping your header */
+  align-self: start;
+}
 
 
 .node--view-mode-full .field--tags {
@@ -16,4 +21,5 @@
         gap: var(--sp1);
     }
 }
+
 

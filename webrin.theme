@@ -6,3 +6,49 @@
 function webrin_theme() {
   return [];
 }
+
+function webrin_preprocess(&$variables) {
+  try {
+	//Uses the path.matcher service to determine if the current page is the front page.
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+	//Stores the result (TRUE or FALSE) in $variables['is_front'], so you can access it in Twig templates. Ex: {% if is_front %} {# Render something only on the front page #} {% endif %}
+    $variables['is_front'] = FALSE;
+  }
+  //Adds a cache context, ensuring this variable behaves correctly with Drupal’s render cache. The url.path.is_front context means: Drupal should consider whether the page is the front page when caching.
+  $variables['#cache']['contexts'][] = 'url.path.is_front';
+}
+
+function webrin_preprocess_breadcrumb(&$variables){
+// add current node title to breadcrumb
+  if($variables['breadcrumb']){
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    if (!empty($page_title)) {
+      $variables['breadcrumb'][] = array(
+        'text' => $page_title
+      );
+      // Add cache context based on url.
+      $variables['#cache']['contexts'][] = 'url';
+    }
+  }
+}
+
+function webrin_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  $variables['view_mode'] = $element['#view_mode']; //Expose node view_mode to field templates
+
+  // add title atribute to field_tags and field_category reference fields
+  if (($variables['element']['#field_type'] == 'entity_reference') && ($variables['element']['#bundle'] == 'article' || $variables['element']['#bundle'] == 'story')) {
+    if (is_array($variables['items'])) {
+      foreach ($variables['items'] as &$item) {
+        if (isset($item['content']['#title'])) {
+         $item['content']['#options']['attributes']['title'] = $item['content']['#title'];
+        }
+      }
+    }
+  }
+}
+
