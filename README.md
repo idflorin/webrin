@@ -29,7 +29,7 @@ Webrin is a custom subtheme of the Olivero theme for Drupal 11.
 
 ## Version
 
-**1.0**
+**1.0.x**
 
 ## License
 
