@@ -8,6 +8,12 @@
     font-size: var(--sp2);
 }
 @media (min-width: 62.5rem) {
+  .sidebar-grid > .site-main {
+    grid-column: 2 / 11;
+  }
+  .sidebar-grid .region--sidebar {
+    grid-column: 11 / 15;
+  }
   .node__content {
     padding-block-end: var(--sp2);
   }
@@ -17,7 +23,7 @@
 	
   .region--sidebar {
     position: sticky;
-    top: 2rem; /* Adjust to avoid overlapping your header */
+    top: 2rem;  /* Adjust to avoid overlapping your header */
     align-self: start;
   }
 }
