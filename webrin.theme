@@ -7,6 +7,17 @@ function webrin_theme() {
   return [];
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function webrin_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('olivero_', 'webrin_', $suggestion);
+  }
+}
+
 function webrin_preprocess(&$variables) {
   try {
 	//Uses the path.matcher service to determine if the current page is the front page.
