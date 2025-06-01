@@ -35,6 +35,10 @@
   .teaser__content {
     gap: var(--sp1);
   }
+}
 
-
+@media (min-width: 75rem) {
+  .site-footer__inner {
+    padding-block: var(--sp2);
+  }
 }
