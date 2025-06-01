@@ -7,6 +7,7 @@
 .comments__title {
     font-size: var(--sp2);
 }
+
 @media (min-width: 62.5rem) {
   .sidebar-grid > .site-main {
     grid-column: 2 / 11;
@@ -25,5 +26,11 @@
     position: sticky;
     top: 2rem;  /* Adjust to avoid overlapping your header */
     align-self: start;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .main-content__container {
+    padding-block-start: var(--sp1);
   }
 }
