@@ -1,15 +1,43 @@
 /* Custom Webrin styles */
 
+/*site-branding*/
+.site-branding__text h1, .site-branding__text h1 a, .site-branding__text h2, .site-branding__text h2 a{
+  color: var(--color--white);
+  font-family: metropolis, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 2rem;
+  line-height: var(--sp2);
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+}
+.site-branding--bg-white .site-branding__text h1, .site-branding--bg-white .site-branding__text h1 a, .site-branding--bg-white .site-branding__text h2, .site-branding--bg-white .site-branding__text h2 a{color: inherit;}
+.site-branding--bg-gray .site-branding__text h1, .site-branding--bg-gray .site-branding__text h1 a, .site-branding--bg-gray .site-branding__text h2, .site-branding--bg-gray .site-branding__text h2 a{color: inherit;}
+
+/* tweaks */
 .region > *:where(:not([data-big-pipe-placeholder-id])) {
-  margin-block-end: var(--sp);
+  margin-block-end: var(--sp1);
 }
 
 .node--view-mode-full .field--tags {
   margin-block-start: var(--sp1);
   margin-block-end: var(--sp1);
 }
+.teaser {
+  padding-block-end: var(--sp1);
+}
+.node__meta {
+  margin-block-end: var(--sp1);
+}
+.node--view-mode-full .node__content ul.links.inline li:first-child a{
+  font-weight: 800;
+}
 .comments__title {
     font-size: var(--sp2);
+}
+.view, .view-content {
+  gap: var(--sp1);
 }
 
 @media (min-width: 43.75rem) {
