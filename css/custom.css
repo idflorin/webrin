@@ -37,7 +37,7 @@
     font-size: var(--sp2);
 }
 .view, .view-content {
-  gap: var(--sp1);
+  gap: var(--sp0-5);
 }
 
 @media (min-width: 43.75rem) {
