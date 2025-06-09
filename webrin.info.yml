@@ -4,7 +4,7 @@ description: 'A custom Olivero subtheme.'
 package: Custom
 core_version_requirement: ^11
 base theme: olivero
-version: 1.0.6
+version: 1.0.7
 
 libraries:
   - webrin/global-styling
