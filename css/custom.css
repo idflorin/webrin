@@ -91,38 +91,3 @@ img{
     padding-block: var(--sp2);
   }
 }
-
-/* gerane */
-.view-frontpage-news h3.field-content{
-	margin-block: 0;
-	font-size: var(--sp1);
-	line-height: var(--sp1-5);
-}
-.view-popular-by-category h3.field-content, .view-id-popular_brand_in_story h3.field-content{
-	margin-block: 0;
-	font-size: var(--sp1);
-	line-height: var(--sp1-5);
-}
-
-.region--sidebar h3, .region--sidebar h4{
-	margin-block: var(--sp1) var(--sp0-25);
-}
-.view-brand-list h5 {margin-block: var(--sp0-25);}
-
-@media (min-width: 62.5rem) {
-.view-content .views-row .node--view-mode-teaser .teaser__content{display: block}
-.view-content .views-row:first-child .node--view-mode-teaser .field--name-field-image-gallery {width:49.2%;float:left;margin:0 1rem 0 0;}
-.view-content .views-row:nth-child(7) .node--view-mode-teaser .field--name-field-image-gallery {width:49.2%;float:left;margin:0 1rem 0 0;}
-.view-content .views-row:nth-child(14) .node--view-mode-teaser .field--name-field-image-gallery {width:49.2%;float:left;margin:0 1rem 0 0;}
-.view-content .views-row:nth-child(28) .node--view-mode-teaser .field--name-field-image-gallery {width:100%;float:left;margin:0 1rem 0 0;}
-.view-content .views-row .node--view-mode-teaser .field--name-field-image-gallery {width:32.2%;float:left;margin:0 1rem 0 0;}
-
-.view-similar-stories .view-content .views-row:first-child .views-field-field-image{width:49.2%;float:left;margin:0 1rem 0 0;}
-.view-similar-stories .view-content .views-row:nth-child(5) .views-field-field-image{width:49.2%;float:left;margin:0 1rem 0 0;}
-.view-similar-stories .view-content .views-row .views-field-field-image{width:32.2%;float:left;margin:0 1rem 0 0;}
-}
-
-.view-similar-stories h2, .view-similar-stories h3 {font-size: var(--sp1-5);line-height: var(--sp2); margin-block: var(--sp1) var(--sp0-25);} 
-.view-similar-stories .views-field-body .field--tags__item a::before {box-sizing: border-box;content: "#";}
-.view-similar-stories .field--tags {margin-block: 0;}
-.view-similar-stories .field--tags__item h4{margin-block: 0;}
