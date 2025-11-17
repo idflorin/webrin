@@ -30,7 +30,9 @@ img{
 .node img{
   margin: 0.5rem 0;
 }
-
+.field:not(:last-child) {
+    margin-block-end: var(--sp0-5);
+}
 .teaser {
   padding-block-end: var(--sp1);
 }
