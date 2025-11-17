@@ -67,6 +67,9 @@ img{
 }
 
 @media (min-width: 62.5rem) {
+  .region--content {
+        margin-block-end: var(--sp1);
+    }
   .sidebar-grid > .site-main {
     grid-column: 2 / 11;
   }
