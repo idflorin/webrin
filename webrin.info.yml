@@ -3,7 +3,7 @@ type: theme
 description: 'A custom Olivero subtheme.'
 package: Custom
 core_version_requirement: ^11
-base theme: Olivero
+base theme: olivero
 version: 1.0.9
 
 libraries:
