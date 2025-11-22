@@ -20,15 +20,22 @@
   margin-block-end: var(--sp1);
 }
 
-.node--view-mode-full .field--tags {
-  margin-block-start: var(--sp1);
-  margin-block-end: var(--sp1);
+.node--view-mode-full .node__content .field--tags {
+  margin-block-start: var(--sp0-5);
+  margin-block-end: var(--sp0-5);
+  padding-block: var(--sp0-5);
+  padding-inline-start: var(--sp1);
+  padding-inline-end: var(--sp1);
 }
+
 img{
   border-radius: 5px;
 }
 .node img{
-  margin: 0.5rem 0;
+  margin-block: var(--sp0-25);
+}
+.node--view-mode-full .text-content h2, .node--view-mode-full .text-content h3, .node--view-mode-full .text-content h4, .node--view-mode-full .text-content h5, .node--view-mode-full .text-content h6, .text-content p {
+  margin-block: var(--sp1) var(--sp0-25);
 }
 .field:not(:last-child) {
     margin-block-end: var(--sp0-5);
