@@ -2,7 +2,7 @@ name: Webrin
 type: theme
 description: 'A custom Olivero subtheme.'
 package: Custom
-core_version_requirement: ^11
+core_version_requirement: ^10.4 || ^11
 base theme: olivero
 version: 1.0.9
 
