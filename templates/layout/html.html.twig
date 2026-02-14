@@ -40,11 +40,13 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
-    {% include '@olivero/includes/preload.twig' with {olivero_path: olivero_path} only %}
+    {% if olivero_path is defined %}
+      {% include '@olivero/includes/preload.twig' with {olivero_path: olivero_path} only %}
+    {% endif %}
     {{ noscript_styles }}
-	{% if 'administrator' not in user.getroles  %}
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3276005982410787" crossorigin="anonymous"></script>
-	{% endif %}
+    {% if show_ads %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3276005982410787" crossorigin="anonymous"></script>
+    {% endif %}
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {#
