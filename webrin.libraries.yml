@@ -2,7 +2,7 @@ global-styling:
   css:
     theme:
       css/custom.css: {}
-      css/sitespecific.css: {}
+      css/overrides.css: {}
   js:
     js/custom.js: {}
   dependencies:
